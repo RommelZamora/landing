@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/image.css');
 /*!
 * Start Bootstrap - New Age v6.0.7 (https://startbootstrap.com/theme/new-age)
 * Copyright 2013-2023 Start Bootstrap
@@ -11164,21 +11165,7 @@ footer a:hover, footer a:active, footer a:focus {
   }
 }
 
-#formulario {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  color: white;
-  font-size: 30px;
-  font-family: "Newsreader", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
 
-#formularioContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 #comentarios {
   height:50pt;
@@ -11191,4 +11178,35 @@ footer a:hover, footer a:active, footer a:focus {
 
 #correo{
   height:50%;
+}
+
+#instagramPhoto{
+  width: 100px; 
+  height: 100px;
+}
+#captionIG{
+  color: white;
+}
+
+#facebookPhoto{
+  width: 100px;
+  height: 100px;
+}
+#captionFB{
+  color: white;
+
+}
+
+#twitterPhoto{
+  width: 100px;
+  height: 100px;
+}
+#captionTWT{
+  color: white;
+}
+
+#socialMediaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
