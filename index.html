@@ -29,7 +29,6 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Características</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Descarga</a></li>
                     </ul>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <span class="d-flex align-items-center">
@@ -41,7 +40,7 @@
             </div>
         </nav>
         <!-- Mashead header-->
-        <header class="masthead">
+        <header class="masthead" id="inicio">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6">
@@ -164,7 +163,7 @@
                                         <!-- * * This can be a video, image, or just about anything else.-->
                                         <!-- * * Set the max width of your media to 100% and the height to-->
                                         <!-- * * 100% like the demo example below.-->
-                                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video>
+                                        <img src="assets/img/fondoTelefono.jpg" style="max-width: 100%; height: 100%"></img>
                                     </div>
                                 </div>
                             </div>
@@ -200,14 +199,19 @@
                 </div>
             </div>
         </section>
-        <!-- App badge section-->
-        <section class="bg-gradient-primary-to-secondary" id="download">
-            <div class="container px-5">
-                <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
-                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                    <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
-                </div>
+        <!-- Form-->
+        <!-- <section class="bg-gradient-primary-to-secondary" id="download"> -->
+        <section class="bg-gradient-primary-to-secondary" id="formulario">
+            <div class="container px-5" id="formularioContainer">
+                <form>
+                    <label for="nombres">Nombres:</label><br>
+                    <input type="text" id="nombres" name="nombres"><br>
+                    <label for="correo">Correo:</label><br>
+                    <input type="text" id="correo" name="correo"><br>
+                    <label for="comentarios">Sugerencias/Comentarios:</label><br>
+                    <input type="text" id="comentarios" name="comentarios"><br>
+                    <input type="submit" id="submitBTN">
+                </form>
             </div>
         </section>
         <!-- Footer-->
@@ -223,12 +227,13 @@
                 </div>
             </div>
         </footer>
+
         <!-- Feedback Modal-->
         <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary-to-secondary p-4">
-                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Send feedback</h5>
+                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Escríbenos!</h5>
                         <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body border-0 p-4">
@@ -243,27 +248,27 @@
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <label for="name">Nombre Completo</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Debes ingresar tu nombre.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <label for="email">Correo Electrónico</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Debes ingresar un correo electrónico válido.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Este no es un correo válido.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <label for="phone">Número de Teléfono</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Debes ingresar un número de teléfono.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
                                 <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <label for="message">Comentario</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Ingresa tu mensaje.</div>
                             </div>
                             <!-- Submit success message-->
                             <!---->
@@ -271,10 +276,7 @@
                             <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    <div class="fw-bolder">Mensaje enviado!</div>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -289,6 +291,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
